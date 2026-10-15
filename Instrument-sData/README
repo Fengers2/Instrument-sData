@@ -1,0 +1,9 @@
+# Registro de Instrumentos
+
+## Configurar almacenamiento de fotos
+
+La API sube las fotos a Vercel Blob y guarda sus URLs en Neon. El almacén usado por este proyecto es `instrument-s-data-blob`.
+
+En Vercel, conecta ese almacén al proyecto en **Storage**. Para desarrollo local, instala y vincula el proyecto con Vercel CLI y ejecuta `vercel env pull .env.local` desde esta carpeta para descargar las variables de entorno. Asegúrate de que `.env.local` incluya `BLOB_READ_WRITE_TOKEN` y `DATABASE_URL`; no publiques ese archivo ni compartas sus valores.
+
+Después de cambiar las variables, reinicia `npm run dev`. En Vercel, vuelve a desplegar para que el nuevo entorno las tome.
